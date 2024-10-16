@@ -27,6 +27,7 @@ import Home from '../pages/Home';
 import Event from '../pages/Event';
 import Service from '../pages/Service';
 import Help from '../pages/Help';
+import UserDashboard from '../pages/UserDashboard';
 
 export default function CustomRouter() {
     return (
@@ -41,6 +42,7 @@ export default function CustomRouter() {
                 <Route path="/Event" element={<Event/>} />
                 <Route path="/Service" element={<Service/>} />
                 <Route path="/Help" element={<Help/>} />
+                <Route path="/UserDashboard" element={<UserDashboard/>} /> 
             </Routes>
         </BrowserRouter>
     );
