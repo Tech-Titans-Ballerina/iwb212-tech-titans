@@ -1,0 +1,197 @@
+/* Popup container */
+#popup {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  
+}
+
+
+.header-popup-content{
+    /* background: url("images/hackathon.jpg");  */
+    height: 300px;
+    background-size: cover;
+    
+    
+    
+    
+}  
+.popup-content {
+    background-color: white;
+    margin:  auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+        
+}
+
+/* Close button */
+.popup-content span{
+    bottom:2rem;
+    color: #aaa;
+    float: right;
+    font-size: 28px; 
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover, .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* .close-btn {
+    bottom:2rem;
+    color: #aaa;
+    float: right;
+    font-size: 28px; 
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+.close-btn:hover, .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header-popup {
+    text-align: center;
+    margin-bottom: 30px;
+    /* background: url("images/conference.jpg");  */
+    overflow: scroll;
+    
+}
+
+.header-popup h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2e2e42;
+}
+
+.action-buttons {
+    display: flex;
+    
+    gap: 20px;
+}
+
+.Reminder-button {
+    background: var(--aqua);
+    border: none;
+    display: block;
+    width: 150px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    background: transparent;
+    font-size: 16px;
+    padding: 12px;
+    border: 2px solid white;
+    border-radius: 25px;
+    margin: 15px 0;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.Reminder-button:hover {
+    background-color: var(--aqua);
+    color: white;
+}
+
+
+.content {
+    display: grid;
+    grid-template-columns: 60% 35%;
+    margin-bottom: 30px;
+    gap: 3.2rem;
+}
+
+.description {
+    background-color: #393E46;
+    padding: 20px;
+    border-radius: 10px;  
+}
+
+.description h3{
+    font-size: 25px;
+    color: white;
+    
+}
+
+.event-overview{
+    background-color: #00ADB5;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+
+.event-overview h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.description p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+}
+
+.event-overview p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.reserve-cad{
+    position: relative;
+    top: 13rem;
+    height: 560px;
+    
+}
+
+.reserve p{
+    color: black;
+    font-size: 30px;
+    font-weight: bolder;
+    top: 4rem;
+}
+.cards3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.7rem;
+}
+
+.card{
+    display: grid;
+    grid-template-rows: 85% 15%;
+    background-color: #393E46;
+    border-radius: 10px;
+    height: 280px;
+}
+
+
+.Buy-Tickets-button{
+    /* background-color: rgb(135, 135, 233); */
+    color: white;
+}
+
+.Buy-Tickets-button button{
+    background-color:#00ADB5;
+    bottom: 2.5rem;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 45.2px;
+}

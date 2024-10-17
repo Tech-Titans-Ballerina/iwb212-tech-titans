@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/Style.css';
+import '../css/Event-popup.css';
 import hackathon from '../images/hackathon.jpg';
 import music_concert from '../images/music-concert.jpg';
 import workshop_1 from '../images/workshop-1.jpg';
@@ -10,6 +11,37 @@ import hackathon_2 from '../images/hackathon-2.jpg';
 import conference from '../images/conference.jpg';
 
 function Event() {
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the popup, button, and close elements
+        const popup = document.getElementById("popup");
+        const openBtn = document.querySelector(".blog .btn");  // Target the "More Info" button
+        const closeBtn = document.querySelector(".close-btn");
+    
+        // Ensure elements exist before adding event listeners
+        if (popup && openBtn && closeBtn) {
+            // When the user clicks the button, open the popup
+            openBtn.addEventListener("click", function(event) {
+                event.preventDefault();  // Prevent the default behavior of the anchor tag
+                popup.style.display = "block";  // Display the popup
+            });
+    
+            // When the user clicks on the close button, close the popup
+            closeBtn.addEventListener("click", function() {
+                popup.style.display = "none";  // Hide the popup
+            });
+    
+            // When the user clicks outside of the popup, close it
+            window.addEventListener("click", function(event) {
+                if (event.target === popup) {
+                    popup.style.display = "none";  // Close the popup if clicked outside
+                }
+            });
+        } else {
+            console.error("One or more elements are missing from the DOM.");
+        }
+    });
+        
+
   return (
     <div>
       <header class = "header">
@@ -73,19 +105,94 @@ function Event() {
                             </div>
                         </div>
 
-                        {/* <div id="popup" class="popup">
-                            <div class="popup-content">
+                        <div id="popup" class="popup">
+                            <div class="popup-content">                               
                                 <span class="close-btn">&times;</span>
-                                <h2>Hackathon Details</h2>
-                                <p>
-                                    A 7-hour hackathon to code, create, and win!<br/><br/>
-                                    Event Details:<br/>
-                                    Date: 17.10.2024<br/>
-                                    Time: 08:00 to 15:00<br/>
-                                    Venue: Avendra Gardens | Negombo
-                                </p>
+                                <div class="header-popup-content-image">
+                                    
+                                    <div class="header-popup-content">
+                                       <img src={hackathon} alt="" />
+                                        <header class="header-popup">
+                                            <h1>BugBash The Hackathon 2024</h1>
+                                            <div class="action-buttons">
+                                                <button class="Reminder-button">Add a Reminder</button>
+                                                <button class="Reminder-button">Add to Favourites</button>
+                                            </div>
+                                        </header>
+                                
+                                        <div class="content">
+                                            <div class="description">
+                                                <h3>Description</h3>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                            </div>
+                                            <div class="event-overview">
+                                                <h3>Event Overview</h3>
+                                                <p><strong>Date:</strong> 2023.01.07</p>
+                                                <p><strong>Venue:</strong> Green Valley Holiday Resort</p>
+                                                <p><strong>Time:</strong> 08:00 to 15:00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="reserve-cad"> 
+                                    <div class = "reserve">
+                                        <p>Reserve Your Space</p>
+                                    </div>
+                                    
+                                    <div class="cards3">
+                                        <div class="card">
+                                            <div class=" card-details">
+                                            
+                                            </div>
+                                        <div class=" Buy-Tickets-button">
+                                            <button>Buy Tickets</button>
+                                        </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class=" card-details">
+                                            
+                                            </div>
+                                            <div class="Buy-Tickets-button">
+                                                <button>Buy Tickets</button>
+                                            </div>
+
+                                        </div>
+                                        <div class="card">
+                                            <div class=" card-details">
+                                            
+                                            </div>
+                                            <div class=" Buy-Tickets-button">
+                                                <button>Buy Tickets</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class=" card-details">
+                                            
+                                            </div>
+                                            <div class=" Buy-Tickets-button">
+                                                <button>Buy Tickets</button>
+                                            </div>    
+                                        </div>
+
+                                        <div class="card">
+                                            <div class=" card-details">
+                                          
+                                            </div>
+                                            <div class=" Buy-Tickets-button">
+                                                <button>Buy Tickets</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>        
                             </div>
-                        </div> */}
+                        </div>
+
+
+                        
                        
                         <div class = "blog">
                             <img src={music_concert} alt="" />
